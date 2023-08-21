@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard!</h1>
+
+    <h2>Your Trips:</h2>
+    <ul>
+        {% for trip in trips %}
+        <li>
+            Destination: {{ trip.destination }} <br>
+            Start Date: {{ trip.start_date }} <br>
+            End Date: {{ trip.end_date }} <br>
+            <!-- Edit button -->
+            <a href="{{ url_for('edit_trip', trip_id=trip.id) }}">Edit</a>
+            <hr>
+        </li>
+    {% endfor %}
+    
+    </ul>
+    
+    <h2>Create a new trip:</h2>
+    <!-- Add this button to dashboard.html -->
+    <a href="{{ url_for('create_trip') }}" class="btn">Create a New Trip</a>
+
+</body>
+</html>

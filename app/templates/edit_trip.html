@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Trip</title>
+</head>
+<body>
+    <h2>Edit Trip</h2>
+
+    <form action="{{ url_for('edit_trip', trip_id=trip.id) }}" method="post">
+        Destination: <input type="text" name="destination" value="{{ trip.destination }}" required><br>
+        Start Date: <input type="date" name="start_date" value="{{ trip.start_date }}" required><br>
+        End Date: <input type="date" name="end_date" value="{{ trip.end_date }}" required><br>
+        <input type="submit" value="Update Trip">
+    </form>
+</body>
+</html>

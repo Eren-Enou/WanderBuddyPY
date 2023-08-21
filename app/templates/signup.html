@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup to WanderBuddy!</title>
+    </head>
+    <body>
+        <h1>Signup to WanderBuddy!</h1>
+        
+        <h2>Add a New User</h2>
+        <form method="post" action="{{ url_for('add_user') }}">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password" required>
+            <br>
+            <button type="submit">Add User</button>
+        </form>
+        
+</body>
+</html>
